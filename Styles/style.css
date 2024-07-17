@@ -1,27 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
-* {
+*{
   box-sizing: border-box;
   max-width: 1440px;
-  height: 4650px;
   margin: 0 auto;
   padding: 0;
 }
 body {
   font-family: Inter;
-  border: 2px solid red;
+  /* border: 2px solid red; */
+  background-color: black;
+  
 }
-
 header {
-  width: 1440px;
+  max-width: 1440px;
   height: 715px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   background: linear-gradient(
     180deg,
     rgb(17, 17, 17),
     rgba(119, 119, 119, 0) 100%
   );
 }
+
 
 /* shared style */
 .primary-color {
@@ -32,22 +33,16 @@ header {
   color: #ffffff;
 }
 
+.text-color {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .text-1 {
   font-size: 36px;
   font-weight: 800;
 }
 
 /* Nav section design */
-.nav-container {
-  /* width: 1440px;
-  height: 715px;
-  border: 2px solid red;
-  background: linear-gradient(
-    180deg,
-    rgb(17, 17, 17),
-    rgba(119, 119, 119, 0) 100%
-  ); */
-}
 .nav-section {
   width: 1060px;
   height: 46px;
@@ -55,6 +50,7 @@ header {
   display: flex;
   gap: 460px;
   cursor: pointer;
+  padding-top: 20px;
 }
 
 .nav-content {
@@ -90,27 +86,214 @@ header {
 
 /* Banner Section Style */
 .banner {
-  width: 520px;
-  height: 440px;
-  border: 2px solid red;
+  display: flex;
 }
 .banner-content {
+  width: 599.05px;
+  height: 440px;
+  margin-top: 100px;
+}
+
+.body {
   width: 520px;
   height: 282px;
   font-size: 70px;
   font-weight: 900;
-  border: 2px solid red;
+  margin-bottom: 40px;
 }
 
-.content-detail {
+.healthy {
   width: 520px;
   height: 48px;
-  color: rgba(255, 255, 255, 0.5);
   font-size: 16px;
   font-weight: 400;
-  margin-bottom: 50px;
-  border: 2px solid red;
+  margin-bottom: 40px;
 }
 
-.btn {
+.btn-primary-1 {
+  width: 224px;
+  height: 54px;
+  margin-left: 2rem;
+  border-radius: 42px;
+  background: rgb(230, 83, 60);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary-2 {
+  width: 224px;
+  height: 54px;
+  margin-left: 2rem;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: black;
+  border-radius: 42px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.banner-img {
+  width: 349px;
+  height: 580px;
+  margin-top: 45px;
+  position: relative;
+}
+
+.banner-img > img {
+  width: 100%;
+  height: 100%;
+}
+.video-item {
+  width: 206px;
+  height: 96px;
+  position: absolute;
+  left: -6rem;
+  top: 25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(20px);
+  background: rgba(48, 48, 48, 0.54);
+}
+
+.video-item {
+  display: flex;
+}
+
+.number {
+  margin-right: 1.7rem;
+  font-size: 24px;
+  font-weight: 900;
+  margin-top: 20px;
+}
+
+.eclipse {
+  width: 40px;
+  height: 40px;
+  background: rgb(230, 83, 60);
+  border-radius: 20px;
+  margin-top: 25px;
+  margin-left: 1rem;
+  margin-right: 1.5rem;
+}
+.number-text {
+  width: 108px;
+  height: 56px;
+}
+.tutorial {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(239, 237, 232, 0.65);
+}
+.workout {
+  width: 193px;
+  height: 98px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  left: 16rem;
+  top: 10rem;
+}
+
+/* Mobile Devices Responsive */
+@media screen and (max-width: 576px) {
+  *{
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .nav-content {
+    display: none;
+  }
+
+  .fit {
+    margin-right: 20rem;
+  }
+
+  .nav-section {
+    max-width: 353px;
+    max-height: 43px;
+    position: relative;
+  }
+  .hum-burger {
+    display: block;
+    max-width: 18px;
+    left: 20rem;
+    top: 2rem;
+    position: absolute;
+  }
+
+  .banner {
+    flex-direction: column;
+  }
+
+  .banner-content {
+    max-width: 352px;
+    height: 335px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .body {
+    font-size: 36px;
+    font-weight: 900;
+  }
+
+  .healthy {
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    top: 10rem;
+  }
+
+  .btn {
+    margin-top: 40px;
+    display: flex;
+    margin-right: 30px;
+    position: absolute;
+    left: -33px;
+    top: 15rem;
+  }
+
+  .btn-primary-1 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .btn-primary-2 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .video-item {
+    position: absolute;
+    left: 8px;
+  }
+
+  .eclipse {
+    max-width: 30.24px;
+    height: 30.24px;
+  }
+
+  .number {
+    font-size: 18.14px;
+    font-weight: 900;
+  }
+
+  .tutorial {
+    font-size: 12.1px;
+    font-weight: 400;
+  }
+
+  .workout{
+    position: absolute;
+    left: -2px;
+    right: -13rem;
+    top: 2rem;
+  }
 }
