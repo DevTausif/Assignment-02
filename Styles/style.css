@@ -110,6 +110,10 @@ header {
   margin-bottom: 40px;
 }
 
+.btn{
+  margin-top: 5rem;
+}
+
 .btn-primary-1 {
   width: 224px;
   height: 54px;
